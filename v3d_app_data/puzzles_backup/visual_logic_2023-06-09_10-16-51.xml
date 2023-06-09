@@ -1,0 +1,71 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <tab name="Init" type="InitTab" active="false" scrollx="20" scrolly="0" scale="0.9"></tab>
+  <tab name="New Tab" type="CommonTab" active="true" scrollx="27.000000000000455" scrolly="80.00000000000017" scale="0.9">
+    <block xmlns="https://developers.google.com/blockly/xml" type="createPhysicsWorld" id="eh@ZM+=jwB2yw~L88g]j" x="230" y="90">
+      <field name="SOFT_BODY">FALSE</field>
+      <value name="GRAVITY">
+        <shadow type="math_number" id="AjUm3TnP6s}--Lwc,VI!">
+          <field name="NUM">9.8</field>
+        </shadow>
+      </value>
+      <value name="FPS">
+        <shadow type="math_number" id="zvfeA^qW}jN;9kmqV~p/">
+          <field name="NUM">60</field>
+        </shadow>
+      </value>
+    </block>
+    <block xmlns="https://developers.google.com/blockly/xml" type="setInterval" id="_rfr%=J|}3k^rn;%MH(J" x="250" y="350">
+      <value name="VALUE">
+        <shadow type="math_number" id="H99n6)gOQ38J^uQuu_#]">
+          <field name="NUM">1</field>
+        </shadow>
+      </value>
+      <statement name="DO">
+        <block type="applyObjLocalTransform" id="W*!s{zGE..38b9I[NgzF">
+          <mutation xmlns="http://www.w3.org/1999/xhtml" usevectorslot="false"></mutation>
+          <field name="MODE">rotation</field>
+          <value name="TARGETOBJ">
+            <shadow type="objectList" id="TH)}MO4b9qjgwr1)]4kh">
+              <field name="FIELDNAME">frame</field>
+            </shadow>
+          </value>
+          <value name="Y">
+            <block type="math_number" id="8km$M/wLJ2bEm|x+!gCD">
+              <field name="NUM">2</field>
+            </block>
+          </value>
+        </block>
+      </statement>
+      <next>
+        <block type="createPhysicsBody" id="J26?(xQO{$5AljY[+V;o">
+          <mutation xmlns="http://www.w3.org/1999/xhtml" body_type="STATIC"></mutation>
+          <field name="TYPE">STATIC</field>
+          <field name="SHAPE">MESH</field>
+          <value name="OBJECT">
+            <shadow type="objectList" id="UbAt#p$Bi^K%TCxqVh,*">
+              <field name="FIELDNAME">frame</field>
+            </shadow>
+          </value>
+          <next>
+            <block type="createPhysicsBody" id="UPtK-|DGYUWCfw.F(k[2">
+              <mutation xmlns="http://www.w3.org/1999/xhtml" body_type="DYNAMIC"></mutation>
+              <field name="TYPE">DYNAMIC</field>
+              <field name="SHAPE">SPHERE</field>
+              <value name="OBJECT">
+                <shadow type="objectList" id="Pri4xE*.w+tO}e~(_OPu">
+                  <field name="FIELDNAME">Sphere</field>
+                </shadow>
+              </value>
+              <value name="MASS">
+                <shadow type="math_number" id="aZ#ajr9G9mVL-d/Nu_[o">
+                  <field name="NUM">1</field>
+                </shadow>
+              </value>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+  </tab>
+  <editorsettings viewport-x="1134" viewport-y="37" viewport-w="768" viewport-h="482" viewport-hidden="false" toolbox-library-mode="false" toolbox-minimized-mode="false"></editorsettings>
+</xml>
